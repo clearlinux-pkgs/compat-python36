@@ -1,6 +1,6 @@
 Name:           compat-python36
 Version:        3.6.5
-Release:        1
+Release:        2
 License:        Python-2.0
 Summary:        The Python Programming Language
 Url:            http://www.python.org
@@ -153,7 +153,7 @@ export LANG=C
 %exclude /usr/bin/pydoc3
 /usr/bin/pydoc3.6
 %exclude /usr/bin/python3
-/usr/bin/python3-config
+%exclude /usr/bin/python3-config
 /usr/bin/python3.6
 /usr/bin/python3.6-config
 /usr/bin/python3.6m
