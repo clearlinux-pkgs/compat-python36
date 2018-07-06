@@ -36,7 +36,6 @@ BuildRequires:  procps-ng-bin
 BuildRequires:  netbase
 Requires: python3-core
 Requires: python3-lib
-Requires: python3-lib-avx2
 Requires: usrbinpython
 
 
