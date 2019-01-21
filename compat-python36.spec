@@ -34,8 +34,8 @@ BuildRequires:  expat-dev
 BuildRequires:  libffi-dev
 BuildRequires:  procps-ng-bin
 BuildRequires:  netbase
-Requires: python3-core
-Requires: python3-lib
+Requires: compat-python3-core
+Requires: compat-python3-lib
 Requires: usrbinpython
 
 
@@ -65,16 +65,10 @@ The Python Programming Language.
 License:        Python-2.0
 Summary:        The Python Programming Language
 Group:          devel/python
-Provides:       python3
-Provides:       python3-modules
-Provides:       /bin/python3
 
 Requires:  	setuptools-python3
 Requires:  	setuptools-bin
 
-
-# evil evil compatibility hack for bootstrap purposes
-Provides:       python(abi) = 3.5
 
 %description core
 The Python Programming Language.
