@@ -34,8 +34,8 @@ BuildRequires:  expat-dev
 BuildRequires:  libffi-dev
 BuildRequires:  procps-ng-bin
 BuildRequires:  netbase
-Requires: compat-python3-core
-Requires: compat-python3-lib
+Requires: compat-python36-core
+Requires: compat-python36-lib
 Requires: usrbinpython
 
 
@@ -56,7 +56,7 @@ The Python Programming Language.
 License:        Python-2.0
 Summary:        The Python Programming Language
 Group:          devel/python
-Requires: 	python3-lib
+Requires: 	compat-python36-lib
 
 %description lib-avx2
 The Python Programming Language.
@@ -66,8 +66,8 @@ License:        Python-2.0
 Summary:        The Python Programming Language
 Group:          devel/python
 
-Requires:  	setuptools-python3
-Requires:  	setuptools-bin
+Requires:  	openstack-setuptools-python3
+Requires:  	openstack-setuptools-bin
 
 
 %description core
@@ -77,8 +77,8 @@ The Python Programming Language.
 License:        Python-2.0
 Summary:        The Python Programming Language
 Group:          devel
-Requires:       python3-lib
-Requires:       python3-core
+Requires:       compat-python36-lib
+Requires:       compat-python36-core
 Requires:	usrbinpython
 
 %define python_configure_flags  --with-threads --with-pymalloc  --without-cxx-main --with-signal-module --enable-ipv6=yes  --libdir=/usr/lib  ac_cv_header_bluetooth_bluetooth_h=no  ac_cv_header_bluetooth_h=no  --with-system-ffi --with-system-expat --with-lto=8 --with-computed-gotos
