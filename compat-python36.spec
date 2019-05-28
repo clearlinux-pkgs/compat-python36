@@ -15,6 +15,7 @@ Patch3:         pgo_profile_pybench.patch
 Patch4:		avx2.patch
 Patch5:		noentropy.patch
 Patch6:		noc99.patch
+Patch7:		cve-2018-14647.patch
 
 BuildRequires:  bzip2
 BuildRequires:  db
@@ -106,6 +107,7 @@ The Python Programming Language.
 %patch4 -p1
 #%patch5 -p1
 %patch6 -p1
+%patch7 -p1
 
 %build
 export LANG=C
