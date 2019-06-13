@@ -17,6 +17,8 @@ Patch5:		noentropy.patch
 Patch6:		noc99.patch
 Patch7:		cve-2018-14647.patch
 Patch8:         CVE-2019-9740.patch
+Patch9:         CVE-2019-9636.patch
+Patch10:        CVE-2018-20406.patch
 
 BuildRequires:  bzip2
 BuildRequires:  db
@@ -110,6 +112,8 @@ The Python Programming Language.
 %patch6 -p1
 %patch7 -p1
 %patch8 -p1
+%patch9 -p1
+%patch10 -p1
 
 %build
 export LANG=C
