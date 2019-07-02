@@ -168,8 +168,7 @@ export LANG=C
 %exclude /usr/lib/python3.6/ensurepip/_bundled/setuptools-28.8.0-py2.py3-none-any.whl
 %exclude /usr/lib/python3.6/site-packages/pkg_resources
 %exclude /usr/lib/python3.6/site-packages/easy_install.py
-
-
+%exclude /usr/lib/python3.6/distutils/command/*.exe
 
 
 %files dev
