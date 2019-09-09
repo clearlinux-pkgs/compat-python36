@@ -1,6 +1,6 @@
 Name:           compat-python36
 Version:        3.6.9
-Release:        13
+Release:        14
 License:        Python-2.0
 Summary:        The Python Programming Language
 Url:            http://www.python.org
@@ -15,6 +15,7 @@ Patch3:         pgo_profile_pybench.patch
 Patch4:		avx2.patch
 Patch5:		noentropy.patch
 Patch6:		noc99.patch
+Patch7:		CVE-2019-16056.patch
 
 BuildRequires:  bzip2
 BuildRequires:  db
@@ -106,6 +107,7 @@ The Python Programming Language.
 %patch4 -p1
 #%patch5 -p1
 %patch6 -p1
+%patch7 -p1
 
 %build
 export LANG=C
