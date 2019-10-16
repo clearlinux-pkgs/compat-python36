@@ -1,6 +1,6 @@
 Name:           compat-python36
 Version:        3.6.9
-Release:        16
+Release:        17
 License:        Python-2.0
 Summary:        The Python Programming Language
 Url:            http://www.python.org
