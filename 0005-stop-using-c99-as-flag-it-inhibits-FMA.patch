@@ -1,0 +1,22 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Arjan van de Ven <arjan@linux.intel.com>
+Date: Sat, 16 Dec 2017 18:36:47 +0000
+Subject: [PATCH] stop using c99 as flag, it inhibits FMA
+
+---
+ configure | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure b/configure
+index e39c16e..4dd18e4 100755
+--- a/configure
++++ b/configure
+@@ -6977,7 +6977,7 @@ UNIVERSAL_ARCH_FLAGS=
+ # tweak BASECFLAGS based on compiler and platform
+ case $GCC in
+ yes)
+-    CFLAGS_NODIST="$CFLAGS_NODIST -std=c99"
++    CFLAGS_NODIST="$CFLAGS_NODIST "
+ 
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
+ $as_echo_n "checking for -Wextra... " >&6; }

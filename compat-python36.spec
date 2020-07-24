@@ -1,22 +1,18 @@
 Name:           compat-python36
-Version:        3.6.10
-Release:        21
+Version:        3.6.11
+Release:        22
 License:        Python-2.0
 Summary:        The Python Programming Language
 Url:            http://www.python.org
 Group:          devel/python
-Source0:        https://www.python.org/ftp/python/3.6.10/Python-3.6.10.tar.xz
-Patch0:         0001-Fix-python-path-for-linux.patch
-# Causes test-suite failures
-#Patch1:         0001-ensure-pip-upgrade.patch
-Patch1:         skip-some-tests.patch
-Patch2:         0001-Replace-getrandom-syscall-with-RDRAND-instruction.patch
-Patch3:         pgo_profile_pybench.patch
-Patch4:		avx2.patch
-Patch5:		noentropy.patch
-Patch6:		noc99.patch
-Patch7:     CVE-2019-9674.patch
-Patch8:     CVE-2020-8492.patch
+Source0:        https://www.python.org/ftp/python/3.6.11/Python-3.6.11.tar.xz
+Patch1:         0001-Fix-python-path-for-linux.patch
+Patch2:         0002-Skip-tests-TODO-fix.patch
+Patch3:         0003-Use-pybench-to-optimize-python.patch
+Patch4:         0004-Add-avx2-and-avx512-support.patch
+Patch5:         0005-stop-using-c99-as-flag-it-inhibits-FMA.patch
+Patch6:         0006-add-AVX-versions-of-math-lib.patch
+Patch7:         CVE-2019-9674.patch
 
 BuildRequires:  bzip2
 BuildRequires:  db
@@ -99,17 +95,13 @@ The Python Programming Language.
 
 %prep
 %setup -q -n Python-%{version}
-%patch0 -p1
-# Todo fix these
 %patch1 -p1
-# make the code not block on getrandom during boot
-#%patch2 -p1
+%patch2 -p1
 %patch3 -p1
 %patch4 -p1
-#%patch5 -p1
+%patch5 -p1
 %patch6 -p1
 %patch7 -p1
-%patch8 -p1
 
 %build
 export LANG=C

@@ -1,0 +1,22 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Arjan van de Ven <arjan@linux.intel.com>
+Date: Sat, 16 Dec 2017 18:53:19 +0000
+Subject: [PATCH] add AVX versions of math lib
+
+---
+ Makefile.pre.in | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/Makefile.pre.in b/Makefile.pre.in
+index 4d73160..63d0220 100644
+--- a/Makefile.pre.in
++++ b/Makefile.pre.in
+@@ -576,6 +576,8 @@ pybuilddir.txt: $(BUILDPYTHON)
+ # This is shared by the math and cmath modules
+ Modules/_math.o: Modules/_math.c Modules/_math.h
+ 	$(CC) -c $(CCSHARED) $(PY_CORE_CFLAGS) -o $@ $<
++	$(CC) -c $(CCSHARED) $(PY_CORE_CFLAGS) -march=haswell -o $@.avx2 $<
++	$(CC) -c $(CCSHARED) $(PY_CORE_CFLAGS) -march=skylake-avx512 -o $@.avx512 $<
+ 
+ # blake2s is auto-generated from blake2b
+ $(srcdir)/Modules/_blake2/blake2s_impl.c: $(srcdir)/Modules/_blake2/blake2b_impl.c $(srcdir)/Modules/_blake2/blake2b2s.py

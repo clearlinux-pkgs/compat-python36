@@ -1,8 +1,18 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Tue, 12 Jun 2018 18:50:08 +0000
+Subject: [PATCH] Use pybench to optimize python
+
+Use pybench to guide PGO.
+---
+ Makefile.pre.in | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
 diff --git a/Makefile.pre.in b/Makefile.pre.in
-index 5e88e3f..afc8290 100644
+index d15d935..4d73160 100644
 --- a/Makefile.pre.in
 +++ b/Makefile.pre.in
-@@ -243,7 +243,8 @@ TCLTK_LIBS=	@TCLTK_LIBS@
+@@ -249,7 +249,8 @@ TCLTK_LIBS=	@TCLTK_LIBS@
  # The task to run while instrumented when building the profile-opt target.
  # We exclude unittests with -x that take a rediculious amount of time to
  # run in the instrumented training build or do not provide much value.
@@ -12,7 +22,7 @@ index 5e88e3f..afc8290 100644
  
  # report files for gcov / lcov coverage report
  COVERAGE_INFO=	$(abs_builddir)/coverage.info
-@@ -477,7 +478,8 @@ build_all_generate_profile:
+@@ -483,7 +484,8 @@ build_all_generate_profile:
  
  run_profile_task:
  	: # FIXME: can't run for a cross build
