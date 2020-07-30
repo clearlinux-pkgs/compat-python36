@@ -55,7 +55,7 @@ The Python Programming Language.
 License:        Python-2.0
 Summary:        The Python Programming Language
 Group:          devel/python
-Requires: 	compat-python36-lib
+Requires:       compat-python36-lib
 
 %description lib-avx2
 The Python Programming Language.
@@ -65,8 +65,8 @@ License:        Python-2.0
 Summary:        The Python Programming Language
 Group:          devel/python
 
-Requires:  	openstack-setuptools-python3
-Requires:  	openstack-setuptools-bin
+Requires:       openstack-setuptools-python3
+Requires:       openstack-setuptools-bin
 
 
 %description core
@@ -78,7 +78,7 @@ Summary:        The Python Programming Language
 Group:          devel
 Requires:       compat-python36-lib
 Requires:       compat-python36-core
-Requires:	usrbinpython
+Requires:       usrbinpython
 
 %define python_configure_flags  --with-threads --with-pymalloc  --without-cxx-main --with-signal-module --enable-ipv6=yes  --libdir=/usr/lib  ac_cv_header_bluetooth_bluetooth_h=no  ac_cv_header_bluetooth_h=no  --with-system-ffi --with-system-expat --with-lto=8 --with-computed-gotos
 
