@@ -1,6 +1,6 @@
 Name:           compat-python36
 Version:        3.6.11
-Release:        23
+Release:        24
 License:        Python-2.0
 Summary:        The Python Programming Language
 Url:            http://www.python.org
@@ -14,6 +14,7 @@ Patch5:         0005-stop-using-c99-as-flag-it-inhibits-FMA.patch
 Patch6:         0006-add-AVX-versions-of-math-lib.patch
 Patch7:         CVE-2019-9674.patch
 Patch8:         CVE-2019-20907.patch
+Patch9:         CVE-2020-14422.patch
 
 BuildRequires:  bzip2
 BuildRequires:  db
@@ -104,6 +105,7 @@ The Python Programming Language.
 %patch6 -p1
 %patch7 -p1
 %patch8 -p1
+%patch9 -p1
 
 %build
 export LANG=C
