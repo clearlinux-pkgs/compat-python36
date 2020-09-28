@@ -1,11 +1,11 @@
 Name:           compat-python36
-Version:        3.6.11
-Release:        25
+Version:        3.6.12
+Release:        26
 License:        Python-2.0
 Summary:        The Python Programming Language
 Url:            http://www.python.org
 Group:          devel/python
-Source0:        https://www.python.org/ftp/python/3.6.11/Python-3.6.11.tar.xz
+Source0:        https://www.python.org/ftp/python/3.6.12/Python-3.6.12.tar.xz
 Patch1:         0001-Fix-python-path-for-linux.patch
 Patch2:         0002-Skip-tests-TODO-fix.patch
 Patch3:         0003-Use-pybench-to-optimize-python.patch
@@ -13,8 +13,6 @@ Patch4:         0004-Add-avx2-and-avx512-support.patch
 Patch5:         0005-stop-using-c99-as-flag-it-inhibits-FMA.patch
 Patch6:         0006-add-AVX-versions-of-math-lib.patch
 Patch7:         CVE-2019-9674.patch
-Patch8:         CVE-2019-20907.patch
-Patch9:         CVE-2020-14422.patch
 
 BuildRequires:  bzip2
 BuildRequires:  db
@@ -104,8 +102,6 @@ The Python Programming Language.
 %patch5 -p1
 %patch6 -p1
 %patch7 -p1
-%patch8 -p1
-%patch9 -p1
 
 %build
 export LANG=C
